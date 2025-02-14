@@ -61,13 +61,13 @@ function Home() {
       </div>
 
       {/* Features Section */}
-      <div className="py-24 bg-muted/50">
-        <div className="container">
+      <div className="relative py-24">
+        <div className="container relative z-10">
           <h2 className="text-3xl font-bold text-center mb-12">
             Why Choose <span className="text-[#FB6415]">Silk Road</span>?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="space-y-4 text-center p-6 rounded-xl bg-card/30 hover:bg-card/50 transition-all duration-300 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)] hover:shadow-[0_0_30px_rgba(251,100,21,0.2)]">
+            <div className="relative z-10 space-y-4 text-center p-6 rounded-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hover:bg-background/80 transition-all duration-300 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)] hover:shadow-[0_0_30px_rgba(251,100,21,0.2)]">
               <div className="w-12 h-12 rounded-full bg-[#FB6415]/10 flex items-center justify-center mx-auto">
                 <Shield className="h-6 w-6 text-[#FB6415]" />
               </div>
@@ -77,7 +77,7 @@ function Home() {
                 transactions
               </p>
             </div>
-            <div className="space-y-4 text-center p-6 rounded-xl bg-card/30 hover:bg-card/50 transition-all duration-300 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)] hover:shadow-[0_0_30px_rgba(251,100,21,0.2)]">
+            <div className="relative z-10 space-y-4 text-center p-6 rounded-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hover:bg-background/80 transition-all duration-300 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)] hover:shadow-[0_0_30px_rgba(251,100,21,0.2)]">
               <div className="w-12 h-12 rounded-full bg-[#FB6415]/10 flex items-center justify-center mx-auto">
                 <Coins className="h-6 w-6 text-[#FB6415]" />
               </div>
@@ -86,7 +86,7 @@ function Home() {
                 Support for SLK tokens, cryptocurrencies, and fiat payments
               </p>
             </div>
-            <div className="space-y-4 text-center p-6 rounded-xl bg-card/30 hover:bg-card/50 transition-all duration-300 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)] hover:shadow-[0_0_30px_rgba(251,100,21,0.2)]">
+            <div className="relative z-10 space-y-4 text-center p-6 rounded-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hover:bg-background/80 transition-all duration-300 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)] hover:shadow-[0_0_30px_rgba(251,100,21,0.2)]">
               <div className="w-12 h-12 rounded-full bg-[#FB6415]/10 flex items-center justify-center mx-auto">
                 <BarChart3 className="h-6 w-6 text-[#FB6415]" />
               </div>
@@ -95,7 +95,7 @@ function Home() {
                 Fractional ownership of real-world assets through tokenization
               </p>
             </div>
-            <div className="space-y-4 text-center p-6 rounded-xl bg-card/30 hover:bg-card/50 transition-all duration-300 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)] hover:shadow-[0_0_30px_rgba(251,100,21,0.2)]">
+            <div className="relative z-10 space-y-4 text-center p-6 rounded-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hover:bg-background/80 transition-all duration-300 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)] hover:shadow-[0_0_30px_rgba(251,100,21,0.2)]">
               <div className="w-12 h-12 rounded-full bg-[#FB6415]/10 flex items-center justify-center mx-auto">
                 <GlobeIcon className="h-6 w-6 text-[#FB6415]" />
               </div>
@@ -109,22 +109,22 @@ function Home() {
       </div>
 
       {/* Stats Section */}
-      <div className="py-24">
-        <div className="container">
+      <div className="relative py-24">
+        <div className="container relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="space-y-2 p-6 rounded-xl bg-card/30 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)]">
+            <div className="relative z-10 space-y-2 p-6 rounded-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hover:bg-background/80 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)]">
               <h3 className="text-4xl font-bold text-[#FB6415]">$10M+</h3>
               <p className="text-muted-foreground">Trading Volume</p>
             </div>
-            <div className="space-y-2 p-6 rounded-xl bg-card/30 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)]">
+            <div className="relative z-10 space-y-2 p-6 rounded-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hover:bg-background/80 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)]">
               <h3 className="text-4xl font-bold text-[#FB6415]">50K+</h3>
               <p className="text-muted-foreground">Active Users</p>
             </div>
-            <div className="space-y-2 p-6 rounded-xl bg-card/30 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)]">
+            <div className="relative z-10 space-y-2 p-6 rounded-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hover:bg-background/80 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)]">
               <h3 className="text-4xl font-bold text-[#FB6415]">1000+</h3>
               <p className="text-muted-foreground">Assets Listed</p>
             </div>
-            <div className="space-y-2 p-6 rounded-xl bg-card/30 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)]">
+            <div className="relative z-10 space-y-2 p-6 rounded-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hover:bg-background/80 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)]">
               <h3 className="text-4xl font-bold text-[#FB6415]">100+</h3>
               <p className="text-muted-foreground">Countries</p>
             </div>
@@ -133,8 +133,8 @@ function Home() {
       </div>
 
       {/* CTA Section */}
-      <div className="py-24 bg-muted/50">
-        <div className="container text-center space-y-8">
+      <div className="relative py-24">
+        <div className="container relative z-10 text-center space-y-8">
           <h2 className="text-3xl font-bold">Ready to Get Started?</h2>
           <p className="text-muted-foreground max-w-[600px] mx-auto">
             Join thousands of users already trading on Silk Road

@@ -15,7 +15,7 @@ interface AssetFiltersProps {
 
 export function AssetFilters({ onFilterChange }: AssetFiltersProps) {
   return (
-    <div className="p-4 border rounded-lg space-y-4 bg-card">
+    <div className="relative z-10 p-4 border rounded-lg space-y-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <h3 className="font-semibold">Filters</h3>
 
       <div className="space-y-4">
