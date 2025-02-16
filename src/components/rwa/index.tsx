@@ -220,7 +220,7 @@ export default function RWA() {
           </button>
         </div>
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="col-span-1">
             <AssetFilters onFilterChange={console.log} />
           </div>

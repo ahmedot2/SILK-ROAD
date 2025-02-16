@@ -28,7 +28,7 @@ export function InstantExchange() {
         <div className="space-y-4">
           <div className="space-y-2">
             <label className="text-sm font-medium">You Send</label>
-            <div className="flex gap-2">
+            <div className="flex flex-col sm:flex-row gap-2">
               <Input
                 type="number"
                 placeholder="0.00"
@@ -37,7 +37,7 @@ export function InstantExchange() {
                 className="flex-1"
               />
               <Select value={fromCurrency} onValueChange={setFromCurrency}>
-                <SelectTrigger className="w-32">
+                <SelectTrigger className="w-full sm:w-32">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -66,7 +66,7 @@ export function InstantExchange() {
 
           <div className="space-y-2">
             <label className="text-sm font-medium">You Receive</label>
-            <div className="flex gap-2">
+            <div className="flex flex-col sm:flex-row gap-2">
               <Input
                 type="number"
                 placeholder="0.00"
@@ -75,7 +75,7 @@ export function InstantExchange() {
                 className="flex-1"
               />
               <Select value={toCurrency} onValueChange={setToCurrency}>
-                <SelectTrigger className="w-32">
+                <SelectTrigger className="w-full sm:w-32">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -90,13 +90,13 @@ export function InstantExchange() {
         </div>
 
         <div className="space-y-3">
-          <div className="flex justify-between text-sm">
+          <div className="flex flex-col sm:flex-row justify-between gap-2 text-sm">
             <span className="text-muted-foreground">Exchange Rate</span>
             <span>
               1 {fromCurrency} = 0.99 {toCurrency}
             </span>
           </div>
-          <div className="flex justify-between text-sm">
+          <div className="flex flex-col sm:flex-row justify-between gap-2 text-sm">
             <span className="text-muted-foreground">Network Fee</span>
             <span>0.1%</span>
           </div>

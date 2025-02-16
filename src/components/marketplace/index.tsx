@@ -421,7 +421,7 @@ export default function Marketplace() {
           />
         </div>
 
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           <div className="col-span-1">
             <ListingFilters filters={filters} onFilterChange={setFilters} />
           </div>

@@ -11,7 +11,9 @@ export function MainLayout({ children }: MainLayoutProps) {
     <div className="min-h-screen bg-background flex flex-col relative overflow-hidden">
       <BackgroundGrid />
       <Navbar />
-      <main className="container mx-auto py-6 flex-1 mt-14">{children}</main>
+      <main className="container mx-auto px-4 sm:px-6 py-6 flex-1 mt-14">
+        {children}
+      </main>
       <Footer />
     </div>
   );

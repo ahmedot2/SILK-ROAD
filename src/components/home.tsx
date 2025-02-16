@@ -66,7 +66,7 @@ function Home() {
           <h2 className="text-3xl font-bold text-center mb-12">
             Why Choose <span className="text-[#FB6415]">Silk Road</span>?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="relative z-10 space-y-4 text-center p-6 rounded-xl bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 hover:bg-background/80 transition-all duration-300 border border-[#FB6415]/20 hover:border-[#FB6415]/40 shadow-[0_0_15px_rgba(251,100,21,0.1)] hover:shadow-[0_0_30px_rgba(251,100,21,0.2)]">
               <div className="w-12 h-12 rounded-full bg-[#FB6415]/10 flex items-center justify-center mx-auto">
                 <Shield className="h-6 w-6 text-[#FB6415]" />
