@@ -10,13 +10,11 @@ export const supabase = createClient<Database>(supabaseUrl, supabaseAnonKey);
 export const auth = {
   // Store nonce for wallet auth
   storeNonce: async (address: string, nonce: string) => {
-    const { error } = await supabase
-      .from("wallet_nonces")
-      .upsert({
-        address: address.toLowerCase(),
-        nonce,
-        created_at: new Date().toISOString(),
-      });
+    const { error } = await supabase.from("wallet_nonces").upsert({
+      address: address.toLowerCase(),
+      nonce,
+      created_at: new Date().toISOString(),
+    });
 
     if (error) throw error;
     return nonce;
@@ -106,5 +104,44 @@ export const auth = {
     if (updateError) throw updateError;
 
     return { success: true };
+  },
+
+  // Create session
+  createSession: async (userId: string) => {
+    const { data: session, error } = await supabase
+      .from("sessions")
+      .insert({
+        user_id: userId,
+        token: crypto.randomUUID(),
+        expires_at: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours
+      })
+      .select()
+      .single();
+
+    if (error) throw error;
+    return session;
+  },
+
+  // Verify session
+  verifySession: async (token: string) => {
+    const { data: session, error } = await supabase
+      .from("sessions")
+      .select("*, users(*, roles(*))")
+      .eq("token", token)
+      .gt("expires_at", new Date().toISOString())
+      .single();
+
+    if (error) throw error;
+    return session;
+  },
+
+  // Delete session
+  deleteSession: async (token: string) => {
+    const { error } = await supabase
+      .from("sessions")
+      .delete()
+      .eq("token", token);
+
+    if (error) throw error;
   },
 };
