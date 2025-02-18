@@ -23,9 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
-!node_modules/.vite
-
+# Tempo specific
 **/tempobook/dynamic/
 **/tempobook/storyboards/
-
 core
+
+# Keep Vite cache
+!node_modules/.vite

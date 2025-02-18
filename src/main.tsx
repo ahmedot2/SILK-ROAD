@@ -1,21 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import { WagmiProvider } from "./providers/WagmiProvider";
-
+import App from "./App";
+import "./index.css";
 import { TempoDevtools } from "tempo-devtools";
+import { testSupabaseConnection } from "./lib/supabase-test";
+
+// Initialize Tempo
 TempoDevtools.init();
 
-const basename = import.meta.env.BASE_URL;
+// Test Supabase connection
+testSupabaseConnection().then((success) => {
+  if (success) {
+    console.log("✅ Backend is ready");
+  } else {
+    console.error("❌ Backend setup failed");
+  }
+});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <WagmiProvider>
-      <BrowserRouter basename={basename}>
-        <App />
-      </BrowserRouter>
-    </WagmiProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
 );

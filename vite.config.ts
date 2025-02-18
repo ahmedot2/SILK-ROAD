@@ -34,47 +34,5 @@ export default defineConfig({
   server: {
     // @ts-ignore
     allowedHosts: true,
-    proxy: {
-      "/api": {
-        target: "http://localhost:5173",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
-        configure: (proxy, options) => {
-          proxy.on("proxyReq", (proxyReq, req, res) => {
-            // Handle API requests
-            if (req.url?.startsWith("/api/auth/nonce")) {
-              res.writeHead(200, { "Content-Type": "application/json" });
-              res.end(
-                JSON.stringify({
-                  nonce: Math.floor(Math.random() * 1000000).toString(),
-                }),
-              );
-            }
-            if (req.url?.startsWith("/api/auth/login")) {
-              // Mock login response
-              res.writeHead(200, { "Content-Type": "application/json" });
-              res.end(
-                JSON.stringify({
-                  user: {
-                    id: "1",
-                    address: req.body?.address,
-                    role: {
-                      id: "1",
-                      name: "user",
-                      permissions: ["read:profile"],
-                    },
-                    kycStatus: "none",
-                    isActive: true,
-                    createdAt: new Date(),
-                    updatedAt: new Date(),
-                  },
-                  token: "mock_jwt_token",
-                }),
-              );
-            }
-          });
-        },
-      },
-    },
   },
 });
